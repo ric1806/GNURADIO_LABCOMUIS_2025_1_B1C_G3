@@ -96,7 +96,7 @@ Transmitir señales usando el USRP 2920 y medir parámetros clave como potencia,
 
 2. **Medición con el Analizador de Espectros**:
    - Conecte la salida del USRP al analizador de espectros.
-   - Mida el piso de ruido normalizado a la frecuencia de portadora que va a utilizar.
+   - Mida el piso de ruido normalizado a la frecuencia de portadora que va a utilizar. --> DA -140dB. 
    - Compare el espectro de la señal observada en el analizador de espectros con la observada en la pantalla de simulación. Tenga en cuenta que el radio (USRP) equivale al diagrama de bloques mostrado en la figura.
 
 <img src="qam_modulator.png" alt="QAM Modulator" width="400">
