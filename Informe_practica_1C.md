@@ -39,10 +39,15 @@ Familiarizarse con las especificaciones técnicas de los equipos de laboratorio 
 3. ¿Cómo se configura el osciloscopio para medir la amplitud y la frecuencia de una señal?
 4. ¿Qué diferencia hay entre medir una señal en el dominio del tiempo (osciloscopio) y en el dominio de la frecuencia (analizador de espectros)?
 5. ¿Cómo se mide el piso de ruido en el analizador de espectros? ¿Cómo afecta la frecuencia central, SPAN y RBW la medida de piso de ruido? ¿Por qué?
-
+#### **Respuestas**
+1. El rango de frecuencia es de 50 MHz a 2.2 GHz, y, el analizador 1 GHz de SPAN.
+2. Es necesario configurar los siguientes parámetros: La frecuencia de muestreo, la frecuencia de la señal y la ganancia de transmisión.
+3. Para debe cerciorarse de que la señal sea visible de forma que se aprecie al menos un ciclo completo, y, que la amplitud no sea tan pequeña como para verse poco ni tan grande como para no verse (por salirse de la pantalla). Luego ir al apartado de Measure y mostrar Amplitud y Frecuencia.
+4. La diferencia es que en el dominio de la frecuencia, la señal revela las frecuencias fundamentales y sus armónicos, mientras que en el dominio del tiempo se observa cómo varía a lo largo de un intervalo. Dependiendo de la información que se necesite, es más conveniente trabajar con uno u otro. Un ejemplo puede ser el cálculo de la potencia de una señal, es más sencillo analizarla en el dominio de la frecuencia para identificar los "picos" y luego convertir esa información a potencia.
+5. Existen varias formas de medir el piso de ruido, y una de ellas consiste en normalizar el ancho de banda de resolución (RBW) a 1 Hz. De este modo, el logaritmo no altera la potencia del ruido, a diferencia de lo que ocurriría si el RBW estuviera en 300 Hz o 1 KHz. Además, la frecuencia central es relevante, ya que no es lo mismo medir el piso de ruido en un rango de frecuencias donde no hay señales notables, que hacerlo en un rango donde sí se detecta una señal y se desea evaluar el ancho de banda útil, descartando el resto como "ruido".
 ### **Evidencia**
 - Lista con las 5 especificaciones más relevantes de cada equipo.
-- Realice una medición de piso de ruido normalizado.
+- Realice una medición de piso de ruido normalizado. La medición de piso resulto en -54.9 dBm aproximadamente. 
 
 ---
 
@@ -77,12 +82,15 @@ Generar y analizar señales en GNU Radio para entender cómo se comportan difere
 4. ¿Cómo se relaciona la amplitud de la señal con la potencia observada en el dominio de la frecuencia?
 5. ¿Qué diferencias se observan entre una señal senoidal y una señal cuadrada en el dominio de la frecuencia?
 
-### **Respuesa a las preguntas**
-1.la diferencia entre na fuene de tipo flotane y compleja en que una (flotane) solo puede aportar valores reales que se peden expresar de la forma a*10^b donde a es un numero real y b es un numero enero siembargo la fuente de ipo compleja tambien uede aportar componentes imagniarias que se pueden reresentar de la foma a+b*i donde a es la componente real, b es la componene imaginaria e i es na unidad e medicion de esta 
-2. la forma de la onda afecta en la cantidad e armonicos que son necesarios para representarla al momento de pasarla a potencia en frecencia debido a que esta representacion se realiza mediane series de fourier. entre mas cambios brusos tenga la honda que queremos representar en el dominio de la frecuencia mayor va a ser la cantidad e armonicos necesarios para represenarla esto se puede ver en la siuiente imagen
+#### **Respuestas**
+1. La principal diferencia entre una fuente de tipo flotante y una de tipo complejo radica en que la fuente flotante solo tiene un número decimal, correspondiente a la parte real de la señal. En cambio, una fuente de tipo complejo incluye tanto un número decimal para la parte real como otro número decimal para la parte imaginaria de la señal, lo que agrega una variable adicional.
+2. La forma de la onda influye considerablemente en la distribución de la energía, ya que su descomposición en series de Fourier genera más componentes. Por ejemplo, una onda senoidal debería mostrar solo dos picos en el dominio de la frecuencia, mientras que una onda en forma de sierra, al tener una mayor complejidad, genera múltiples picos en ese mismo dominio. Es decir, afecta la cantidad de armónicos que son necesarios para representar a la señal al pasarla a potencia.
 ![Networking](Triangle_4500Hz.png)
 ![Networking](imagenes/Sine_100Hz.png)
-3. todos los cambios de amplitud y frecuencia se ver reflejados en ambos dominios, tiempo y frecuencia , por parte de la amplitud se ve mas reflejada en el iempo debido a que en frecuencia enemos una escada de dB
+3. En el dominio del tiempo, los cambios son más difíciles de notar, limitándose a una ligera variación en la amplitud. Sin embargo, en el dominio de la frecuencia, la potencia de las señales aumenta de manera significativa, lo que hace que estos cambios sean más evidentes.
+4. La amplitud de la señal está relacionada con la potencia debido a su representación en la transformada de Fourier. Matemáticamente, esto se debe a que el espectro de una señal de la forma Acos(wt + p)es equivalente a dos impulsos con una amplitud de A/2. Esto muestra cómo la potencia de la señal se distribuye en el dominio de la frecuencia.
+5. En el dominio de la frecuencia, una señal senoidal generalmente se representa por uno o dos picos notables, dependiendo de la frecuencia de la señal (sin incluir la frecuencia de la portadora). En cambio, para una señal cuadrada, los coeficientes de Fourier tienen un valor de \2A/(pi*n), lo que implica que se generan varios impulsos en el dominio de la frecuencia. Estos impulsos corresponden a los armónicos de la señal, y su amplitud disminuye a medida que aumenta el valor del número de n-armónico.
+
 ### **Evidencias**
 - Capturas de pantalla de señales generadas en el dominio del tiempo y la frecuencia que evidencien cada una de las comparaciones realizadas.
 
