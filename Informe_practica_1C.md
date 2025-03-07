@@ -77,6 +77,11 @@ Generar y analizar señales en GNU Radio para entender cómo se comportan difere
 4. ¿Cómo se relaciona la amplitud de la señal con la potencia observada en el dominio de la frecuencia?
 5. ¿Qué diferencias se observan entre una señal senoidal y una señal cuadrada en el dominio de la frecuencia?
 
+### **Respuesa a las preguntas**
+1.la diferencia entre na fuene de tipo flotane y compleja en que una (flotane) solo puede aportar valores reales que se peden expresar de la forma a*10^b donde a es un numero real y b es un numero enero siembargo la fuente de ipo compleja tambien uede aportar componentes imagniarias que se pueden reresentar de la foma a+b*i donde a es la componente real, b es la componene imaginaria e i es na unidad e medicion de esta 
+2. la forma de la onda afecta en la cantidad e armonicos que son necesarios para representarla al momento de pasarla a potencia en frecencia debido a que esta representacion se realiza mediane series de fourier. entre mas cambios brusos tenga la honda que queremos representar en el dominio de la frecuencia mayor va a ser la cantidad e armonicos necesarios para represenarla esto se puede ver en la siuiente imagen
+![Networking](my%20file/Sine_100Hz.png, Triangle_4500Hz.png)
+
 ### **Evidencias**
 - Capturas de pantalla de señales generadas en el dominio del tiempo y la frecuencia que evidencien cada una de las comparaciones realizadas.
 
