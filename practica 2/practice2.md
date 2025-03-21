@@ -119,10 +119,15 @@ Familiarizarse con los fenómenos de un canal alámbrico real en el dominio de l
 - Usando cables coaxiales de diferentes longitudes, ¿cómo afecta la distancia entre el transmisor y el receptor a la amplitud de la señal medida?
 - Usando antenas, ¿cómo afecta la distancia entre el transmisor y el receptor a la amplitud de la señal medida? ¿Es posible compensar el fenómeno?
 - ¿Qué modelo de canal básico describe mejor las mediciones obtenidas en la práctica?
-
+### Respuestas a las preguntas
+1.coomo se puede evidenciar el la figura 3.1 que es la captura de la simulacion incluyendo ruido el espectro en frecuencia sigue llegando a tener una forma parecida a un pico con sus respectivos armonicos distorcionados sin embargo en la imagen 3.2 se evidencia la imagen del analisador de espectro donde veos que el espectro de la señal es afectada de mayor manera por el ruido generado por los propios dispositicos de emicion, resepcion y cables que transportan la señal, por ende podemos decir que la simulacion sirve para lograr comprender el comportamiento de la señal sin embargo se llega a alejar del comportamiento real de la señal
+2.en la imagen 3.3 podemos evidenciar la señal que deseamos mandar mezclada con una señal e ruido predeterminada, despues deesto en la imagen 3.4 podemos evidenciar la señal resivida en el analizador de espectro, en este podemos evidenciar que a pesar de que en la simulacion el ruido afecta mucho mas a la señal de lo que sucede en el analizador , esto se debe a que la atenuacion y el ruido ya mencionado de los dispocitivo afecta a la propia señal de ruido de la simulacion lo que hace que esta tambien pierda potencia y se vea afectada 
+3.en las imagenes 3.5 y 3.6 podemos evidenciar las mediciones de la potencia de la señal y la potencia de la señal, a partir d eestas mediciones y el factor RBW podemos hallar el valor SNR normalizado usando la siguiente formula:
+esta misma formula se usa tambien para hallar el factor SNR de la señal simulada mostrada en la aimagen 3.7 y se repite este mismo proceso con la siguietne señal simulada mostrada en la imagen 3.8, las mediciones del analizador de espectro estanen las imagenes 3.9 y 3.10
+4. el fenomeno de desviaicion en frecuencia se puede evidenciar en cualquiera de las actividades anteriores ya que se ve que la frecuencia portadora o carrier hace que toda la señal base de la fuente se transaldae a la frecuencia de acarreo en el analizador de espectro
 ### Evidencia
 
-*(Adjuntar las evidencias de la práctica en el Aula Virtual: capturas de pantalla, observaciones, cálculos o mediciones preliminares)*
+*(Adjuntar las evidencias de la práctica en el Aula Virtual: capturas de pantalla, observaciones, cálculos o mediciones preliminares)*re
 
 ## Actividad 4: Efectos de los fenómenos de canal en la conversión de frecuencia
 
